@@ -95,9 +95,9 @@ DIVIDE(msa,den,0)
 
 11. Market valuation Before 5G
 
-    ```DAX
-    Market valuation Before 5G = CALCULATE(DIVIDE(SUM(fact_market_share[tmv_city_crores]),DISTINCTCOUNT(dim_date[month_name])),dim_date[before/after_5g]="Before 5G")
-  ```
+```DAX
+Market valuation Before 5G = CALCULATE(DIVIDE(SUM(fact_market_share[tmv_city_crores]),DISTINCTCOUNT(dim_date[month_name])),dim_date[before/after_5g]="Before 5G")
+```
 
 12. Market Valuation difference
 
@@ -107,8 +107,8 @@ Market Valuation difference = [Market valuation After 5G]-[Market valuation Befo
 
 13. MoM % Unsubscribed Users Change
 
-     ```DAX
-     MoM % Unsubscribed Users Change=
+```DAX
+MoM % Unsubscribed Users Change=
 VAR CurrentMonth = SUM(fact_atliqo_metrics[unsubscribed_users_lakhs])
 VAR Previous_Month = 
     CALCULATE(
@@ -119,7 +119,7 @@ RETURN
     DIVIDE(CurrentMonth - Previous_Month, Previous_Month)
 ```
     
-  14. MoM Active Users Change % 
+ 14. MoM Active Users Change % 
 
 ```DAX
 MoM Active Users Change % =
@@ -269,81 +269,45 @@ P11 and P12 gained rapid user adoption.
 City-wise revenue remains stable, as higher ARPU offsets subscriber loss.
 
 
+## Active Users
+
+Active users dropped by ~70 Lakh (8.28%) post-5G.
+User count declined in all cities except Pune (slight increase) and Chennai (stable).
+Steady decline in active users from July onwards.
+
+### Suggestions:
+
+Deploy field teams to conduct surveys on user attrition.
+Analyze Pune’s growth strategy for broader application.
 
 
-### [1] Total Sales for the month of May 
+## Unsubscribed Users
 
-   Total Sales for May - $157K
-   
-   Total Sales went up by 31.8% in the month of May when compared to April - $37.8K
+13.24 Lakh users unsubscribed post-5G (~8.25% decline).
+Churn increased across most cities, except Mumbai.
 
-### [2] Total Orders for the month of May 
+### Suggestions:
+Conduct targeted surveys to understand churn drivers.
 
-   Total Orders for May - 33527
-   
-   Total Orders went up by 32.3% in the month of May when compared to April - 8.2K
-   
-### [3] Total Sales for the month of May 
 
-   Total Quantity for May - 48233
-   
-   Total Quantity went up by 32.3% in the month of May when compared to April - 11.8K
+## Market Valuation
 
-           
-###  [4] Sales Compared to Weekends by Weekdays
+Market valuation rose by over ₹670 Cr after 5G launch.
+Atliq now commands 20% market share.
 
-Sales in Weekdays contributes to 74.41% with weekends contributing 25.59%
-  
-  
-### [5] Top performing Store Locations in May
-  
-Hell's Kitchen - $56.96K
-Astoria - $55.08K
-Lower Manhattan - $54.45K
+### Possible Causes:
 
-### [6] Some other insights
-
-**Top 3 performing product sales by category**
-
-Coffee -$64.9K
-Tea - $46.24K
-Bakery - 19.25K
-
-**Bottom 3 performing product sales by category**
-
-Loose tea - $2.77K
-Flavours - $2.0K
-Packaged Choc0late - $0.99K
-
-**Top 3 performing product Type by category**
-
-Barista Espresso - $21.66K
-Brewed Chai Tea - $18.19
-Gourmet brewed Coffee - $17.14K
-
-**Bottom 3 performing product sales by category**
-
-Organic brewed Coffee - $8.78K
-Scone - $8.55K
-Drip Coffee - $7.77K
-
-### Staff Assignment
-
-From the heat map it can be noticed that 
-* Friday,Thursday and Wednesday between 7 AM to 11 AM is the busiest at **Hell's Kitchen**
-* Friday,Thursday, Saturday and Monday between 7 AM to 10 AM is the busiest at **Astoria**
-* Friday,Thursday, Tuesday between 7 AM to 10 AM is the busiest at **Lower Manhattan**
-
- With this data the store manager can allocate more employee between that time for faster service
+New tech introduction typically boosts valuation.
+Sustained market share growth hinges on pricing, customer acquisition, and service quality.
 
 
  ## Analysis
 
-1. With the above dashboard we can determine the best and worst selling products at each store location on each day of the week at specified time. using this Employee allocation can be done easily by shifting people from non rush hours to rush hour time slot or hiring part time employee to make the line move faster and thus catering to more customers.
+1. With the above dashboard we can determine the best and worst plans generating revenue and revenue contribution from each city. Atliqo can increase their revenue by focusing more on combo offers than indiviual pack and offer additional benifits such as free OTT subscription.
  
-2. We can also determine the worst selling products and the leadership can decide wheather the product need to be completely removed or make it a once a week speacial based on the total revenue generated from the product.
+2. High churn rate in nearly all cities can be observered, field team to run surveys to understand the reason behind it.
 
-3. We can device a stratergy to promote the mid level selling products by either reducing the price or including that product as a combo with other low/mid selling products to increase more sales
+3. From the report it is clear that there has been a downfall in revenue, active users and increase in unsubscribed users
 
 ## Author - Venkatesh Varma V
 
